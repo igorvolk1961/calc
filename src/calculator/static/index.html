@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Калькулятор</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="app">
+    <section class="calculator">
+      <h1>Калькулятор</h1>
+      <input id="expression" class="display" type="text" autocomplete="off"
+             spellcheck="false" placeholder="2 + 3 * (4 - 1)">
+      <div id="result" class="result" aria-live="polite"></div>
+      <div class="keypad">
+        <button data-insert="sqrt(">√</button>
+        <button data-insert="^">x^y</button>
+        <button data-insert="(">(</button>
+        <button data-insert=")">)</button>
+        <button class="op" data-insert="/">÷</button>
+
+        <button data-insert="7">7</button>
+        <button data-insert="8">8</button>
+        <button data-insert="9">9</button>
+        <button data-insert="pi">π</button>
+        <button class="op" data-insert="*">×</button>
+
+        <button data-insert="4">4</button>
+        <button data-insert="5">5</button>
+        <button data-insert="6">6</button>
+        <button data-insert="e">e</button>
+        <button class="op" data-insert="-">−</button>
+
+        <button data-insert="1">1</button>
+        <button data-insert="2">2</button>
+        <button data-insert="3">3</button>
+        <button data-insert="abs(">|x|</button>
+        <button class="op" data-insert="+">+</button>
+
+        <button data-insert="0">0</button>
+        <button data-insert=".">.</button>
+        <button id="backspace">←</button>
+        <button id="clear" class="danger">C</button>
+        <button id="equals" class="equals">=</button>
+
+        <button data-insert="sin(">sin</button>
+        <button data-insert="cos(">cos</button>
+        <button data-insert="tan(">tan</button>
+        <button data-insert="log(">ln</button>
+        <button data-insert="log10(">log10</button>
+        <button data-insert="exp(">exp</button>
+      </div>
+    </section>
+
+    <aside class="history-panel">
+      <div class="history-header">
+        <h2>История</h2>
+        <button id="clear-history" class="link">Очистить</button>
+      </div>
+      <ul id="history" class="history"></ul>
+    </aside>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
